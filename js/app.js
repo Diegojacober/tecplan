@@ -89,20 +89,7 @@ $('#form-login').on('submit', function (e) {
         setCookie("loggedUser", "true", 10800);
         openPage('home.html', 'TecPlan | Home')
 
-        Swal.fire({
-            title: 'Deseja instalar o app',
-            text: "Acesse de forma simples em seu telefone",
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonColor: '#B6C625',
-            cancelButtonColor: '#ddd4',
-            confirmButtonText: 'Instalar',
-            cancelButtonText: 'Não',
-          }).then((result) => {
-            if (result.isConfirmed) {
-             installApp()
-            }
-          })
+       $('#modal-installer').modal('show')
     }
 })
 
