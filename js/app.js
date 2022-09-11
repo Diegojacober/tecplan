@@ -129,7 +129,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 function installApp() {
     // Show the prompt
-    $('#modal-installer').modal('hide')
+    
     deferredPrompt.prompt();
     //setupButton.disabled = true;
     // Wait for the user to respond to the prompt
