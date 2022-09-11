@@ -1,0 +1,341 @@
+<header class="menu">
+    <nav>
+        <a onclick="openPage('home.html')"><img src="./images/akar-icons_arrow-back-thick.svg" width="33" height="27"
+                alt="icone voltar"></a>
+
+        <div class="brand-menu">
+            <img src="./images/tecplan-white.svg" alt="Brand">
+        </div>
+    </nav>
+</header>
+
+
+<div class="options">
+    <div class="option-control" >
+        <p class="option-name-control">Temperatura</p>
+        <div class="brand--option-control"><img src="./images/fa_thermometer-3.svg" alt="Icone de temperatura"
+                height="35" width="28"></div>
+        <p class="control-text"> 24° C</span>
+    </div>
+
+    <div class="option-control ml" id="umidade-btn">
+        <p class="option-name-control"><i class="info-icon" id="info-umidade"><img
+                    src="./images/clarity_info-circle-line.svg" width="15" height="15"></i> Umidade do solo</p>
+        <div class="brand--option-control"><img src="./images/mdi_water-percent.svg" alt="Icone de água" height="45"
+                width="45"></div>
+        <p class="control-text">80%</span>
+    </div>
+
+
+    <div class="option-control mt" id="luminosidade-btn">
+        <p class="option-name-control"><i class="info-icon" id="info-luminosidade"><img src="./images/clarity_info-circle-line.svg" width="15"
+                    height="15"></i> Luminosidade</p>
+        <div class="brand--option-control"><img src="./images/akar-icons_sun.svg" alt="Icone de sol" height="45"
+                width="45"></div>
+        <p class="control-text">25%</span>
+    </div>
+
+    <div class="option-control ml mt" id="ventilacao-btn">
+        <p class="option-name-control"><i class="info-icon" id="info-ventilacao"><img src="./images/clarity_info-circle-line.svg" width="15"
+                    height="15"></i> Ventilação</p>
+        <div class="brand--option-control"><img src="./images/mdi_fan.svg" alt="Icone de fan" height="40" width="40">
+        </div>
+        <p class="control-text">03 km/h</span>
+    </div>
+</div>
+
+
+<!-- modal luminosidade -->
+<div class="modal fade" tabindex="-1" id="modal-luminosidade">
+    <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header modal-head">
+          <h5 class="modal-title"><img src="./images/tecplan-white.svg" alt="Brand" height="50"></h5>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="title-modal">
+                Controlar Luminosidade
+            </div>
+
+            <div class="info-modal">
+                <span id="tempvalue">25</span><span id="percent">%</span>
+            </div>
+
+
+          <div class="control-area">
+            <div class="modal-slider">
+                <input type="range" min="0" max="100" value="25" class="estilo" id="range-temp">
+            </div>
+
+            <div class="modal-options">
+                <div class="option-modal" onclick="rangeLuminosidade(25)">
+                    <div class="icon-option"><img src="./images/luminosidade25.svg" height="45" width="45" alt="Luminosidade 25%"></div>
+                    <div class="text-option"><span>25%</span></div>
+                </div>
+
+                <div class="option-modal" onclick="rangeLuminosidade(50)">
+                    <div class="icon-option"><img src="./images/luminosidade50.svg" height="45" width="45" alt="Luminosidade 50%" srcset=""></div>
+                    <div class="text-option"><span>50%</span></div>
+                </div>
+
+                <div class="option-modal" onclick="rangeLuminosidade(75)">
+                    <div class="icon-option"><img src="./images/luminosidade75.svg" height="45" width="45" alt="Luminosidade 75%"></div>
+                    <div class="text-option"><span>75%</span></div>
+                </div>
+
+                <div class="option-modal" onclick="rangeLuminosidade(100)">
+                    <div class="icon-option"><img src="./images/luminosidade100.svg" height="45" width="45" alt="Luminosidade 100%"></div>
+                    <div class="text-option"><span>100%</span></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- modal ventilação -->
+<div class="modal fade" tabindex="-1" id="modal-ventilacao">
+    <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header modal-head">
+          <h5 class="modal-title"><img src="./images/tecplan-white.svg" alt="Brand" height="50"></h5>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="title-modal">
+                Controlar Ventilação
+            </div>
+
+            <div class="info-modal">
+                <span id="ventvalue">03</span><span id="percent">km/h</span>
+            </div>
+
+
+          <div class="control-area">
+            <div class="modal-slider">
+                <input type="range" min="0" max="14" value="03" class="estilo" id="range-vent">
+            </div>
+
+            <div class="modal-options">
+                <div class="option-modal" onclick="rangeVentilacao(03)">
+                    <div class="icon-option mt-6"><img src="./images/mdi_fan.svg" id="fan-03" height="33" width="33" alt="Ventilação 03 km/h"></div>
+                    <div class="text-option ft-s"><span>03 km/h</span></div>
+                </div>
+
+                <div class="option-modal" onclick="rangeVentilacao(06)">
+                    <div class="icon-option mt-6"><img src="./images/mdi_fan.svg" id="fan-06" height="33" width="33" alt="Luminosidade 50%" srcset=""></div>
+                    <div class="text-option ft-s"><span>06 km/h</span></div>
+                </div>
+
+                <div class="option-modal" onclick="rangeVentilacao(09)">
+                    <div class="icon-option mt-6"><img src="./images/mdi_fan.svg" id="fan-09" height="33" width="33" alt="Luminosidade 75%"></div>
+                    <div class="text-option ft-s"><span>09 km/h</span></div>
+                </div>
+
+                <div class="option-modal" onclick="rangeVentilacao(12)">
+                    <div class="icon-option mt-6"><img src="./images/mdi_fan.svg" id="fan-12" height="33" width="33" alt="Luminosidade 100%"></div>
+                    <div class="text-option ft-s"><span>12 km/h</span></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- modal umidade -->
+<div class="modal fade" tabindex="-1" id="modal-umidade">
+    <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header modal-head">
+          <h5 class="modal-title"><img src="./images/tecplan-white.svg" alt="Brand" height="50"></h5>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="title-modal">
+                Controlar Umidade do solo
+            </div>
+
+            <div class="info-modal">
+                <span id="ventvalue">50</span><span id="percent">ml</span>
+            </div>
+
+
+          <div class="control-area">
+
+            <div class="modal-options" style="padding-left: 30px;">
+                <div class="option-modal-umidade" onclick="liberarAgua(50)">
+                    <div class="icon-option"><img src="./images/umidade50.svg"  height="45" alt="umidade de 50ml"></div>
+                    <div class="text-option"><span>50ml</span></div>
+                </div>
+
+                <div class="option-modal-umidade" onclick="liberarAgua(100)">
+                    <div class="icon-option"><img src="./images/umidade100.svg"  height="45" alt="umidade de 100ml" srcset=""></div>
+                    <div class="text-option"><span>100ml</span></div>
+                </div>
+
+                <div class="option-modal-umidade" onclick="liberarAgua(150)">
+                    <div class="icon-option"><img src="./images/umidade150.svg" height="45" alt="Umidade de 150ml"></div>
+                    <div class="text-option"><span>150ml</span></div>
+                </div>
+
+                <div class="option-modal-umidade" onclick="liberarAgua(200)">
+                    <div class="icon-option"><img src="./images/umidade200.svg" height="45" alt="Umidade de 200ml "></div>
+                    <div class="text-option"><span>200ml</span></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    $('#nome-estufa').html(dadosEstufa.nome)
+
+    $('#info-umidade').on('click', function () {
+        Swal.fire(
+            'Umidade do Solo',
+            'Você pode controlar a umidade do solo ao clicar nesse botão',
+            'info'
+        )
+    })
+
+    $('#info-luminosidade').on('click', function () {
+        Swal.fire(
+            'Luminosidade',
+            'Você pode diminuir ou aumentar a luz dentro da estufa',
+            'info'
+        )
+    })
+
+    $('#info-ventilacao').on('click', function () {
+        Swal.fire(
+            'Ventilação',
+            'Você pode controlar a ventilação através da fan',
+            'info'
+        )
+    })
+
+    $('#luminosidade-btn').on('click', () => {
+        $('#modal-luminosidade').modal('show')
+    })
+
+    $('#ventilacao-btn').on('click',() => {
+        $('#modal-ventilacao').modal('show')
+    })
+
+    $('#umidade-btn').on('click',() => {
+        $('#modal-umidade').modal('show')
+    })
+
+
+    function liberarAgua(quantidade){
+
+
+        let timerInterval
+Swal.fire({
+  title: `Liberando ${quantidade}ml de água`,
+  html: 'O processo começará em <b></b> milisegundos.',
+  timer: 2500,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('Opreção feita com sucesso')
+  }
+})
+
+    }
+
+</script>
+
+<script type="text/javascript">
+
+
+    function rangeLuminosidade(valorBtn){
+
+        let resultado = document.getElementById("tempvalue");
+        let valor
+     
+        if(!isNaN(parseInt(valorBtn) )){
+            valor = valorBtn
+            resultado.innerHTML = valor
+            $('#range-temp').val(valor)
+        }else{
+            valor = document.getElementById("range-temp").value;
+            resultado.innerHTML = valor
+        }
+     
+
+     if(valor >= 49){
+        document.querySelector('#range-temp').style.setProperty('--track-fill', `${valor}%`);
+     }else {
+        document.querySelector('#range-temp').style.setProperty('--track-fill', `${valor}%`);
+     }
+     
+    }
+    
+    rangeLuminosidade()
+    
+    document.getElementById("range-temp").addEventListener("change", rangeLuminosidade);
+     
+</script>
+    
+
+<script type="text/javascript">
+
+
+    function rangeVentilacao(valorBtn){
+
+        let resultado = document.getElementById("ventvalue");
+        let valor
+     
+        if(!isNaN(parseInt(valorBtn) )){
+            valor = valorBtn
+            resultado.innerHTML = valor
+            $('#range-vent').val(valor)
+        }else{
+            valor = document.getElementById("range-vent").value;
+            resultado.innerHTML = valor
+        }
+     
+
+     if(valor > 10){
+        valor = (valor*10)-10
+        document.querySelector('#range-vent').style.setProperty('--track-fill-vent', `${valor}px`);
+     }else {
+        valor = valor*10
+        document.querySelector('#range-vent').style.setProperty('--track-fill-vent', `${valor}px`);
+     }
+     
+    }
+    
+    rangeVentilacao()
+    
+    document.getElementById("range-vent").addEventListener("change", rangeVentilacao);
+     
+</script>

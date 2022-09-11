@@ -1,0 +1,613 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+:root {
+    --background-color: #B6C625;
+    --color-dark: #828F1A;
+
+    
+}
+
+h5{
+    color: var(--color-dark);
+}
+
+.errorComputer {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    flex-direction: column;
+
+}
+
+.imgError {
+    background: url('../images/tela-de-erro.png') no-repeat;
+    background-position: 0% 10px;
+    background-size: cover;
+    height: 700px;
+    width: 1024px;
+}
+
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boxLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 55px;
+}
+
+.brand {
+    width: 185px;
+    height: 185px;
+    background: url('../images/logo-tecplan.png');
+}
+
+
+.form-box {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-item {
+    border-bottom: 1.5px solid var(--color-dark);
+    height: 20px;
+    width: 230px;
+    margin-bottom: 40px;
+    display: flex;
+    padding-bottom: 26px;
+}
+
+
+.form-login {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.icon-field {
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-entrar,
+.btn-cadastrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    width: 230px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.forget-password {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: -50px;
+}
+
+.btn-cad {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 120px;
+    font-weight: bold;
+}
+
+.btn-reload{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.btn-login {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.field-text,
+.field-password {
+    border: none;
+    height: 20px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 15px;
+    color: var(--color-dark);
+    width: 100%;
+}
+
+.field-text:focus,
+.field-password:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.field-text::placeholder,
+.field-password::placeholder {
+    color: #818f1ab6;
+}
+
+.page-title {
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--color-dark);
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 50px;
+    animation-duration: 2.2s;
+    animation-name: loading;
+    animation-iteration-count: infinite;
+    height: 100vh;
+}
+
+.loading h6 {
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+
+.menu,nav{
+    width: 100vw;
+    height: 50px;
+    background-color: var(--background-color);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.brand-menu{
+    width: 40px;
+    height: 40px;
+}
+
+.options{
+    width: 320px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 103px;
+}
+
+.option{
+    width: 130px;
+    height: 130px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.option-control{
+    width: 130px;
+    height: 130px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.option-name-control{
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.brand--option-control{
+    width: 28px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.brand--option{
+    margin-bottom: 8px;
+}
+
+.brand--option img{
+    height: 75px;
+    width: 75px;
+}
+
+.option{
+    color: var(--color-dark);
+    font-size: 14px;
+}
+
+.estufas--cadastradas{
+    padding: 10px;
+    background-color: rgb(236, 234, 234,0.61);
+    margin-bottom: 10px;
+}
+
+.box--estufa{
+    display: flex;
+    align-items: center;
+}
+
+.img--estufa img{
+    height: 65px;
+    width: 65px;
+}
+
+.info--estufa{
+    margin-left: 20px;
+    width: 255px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info--estufa p{
+    margin-bottom: 0px;
+}
+
+.estufa--title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.estufa--sala{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.estufa--escola{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.estufa--data{
+    font-size: 10px;
+    font-weight: 600;
+    color: #515151;
+}
+
+.btn-controlar-estufa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 150px;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    margin-top: 10px;
+    color: #383838;
+    font-weight: bold;
+}
+
+
+
+#btn-new-estufa{
+    width: 265px;
+    height: 35px;
+    font-size: 12px;
+    font-weight: 900;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    border: none;
+}
+
+.inactive{
+    filter: opacity(0.6);
+}
+
+.option-control{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.brand--option-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-name-control{
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+.control-text{
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.info-icon{
+    margin-right: 2px;
+}
+
+.modal-head{
+    background-color: var(--background-color);
+}
+
+.title-modal{
+    background-color: #D5DE80;
+    padding: 3px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.info-modal{
+    position: absolute;
+    right: 0;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--background-color);
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#percent{
+    font-size: 48px;
+}
+
+.control-area{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.option-modal{
+    width: 80px;
+    height: 80px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.option-modal-umidade{
+    width: 100px;
+    height: 100px;
+    border: 0.5px solid rgba(0, 0, 0, 0.30);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.icon-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.text-option{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: 8px;
+}
+
+.ft-s{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.mt-6{
+    margin-top: 9px;
+}
+
+.ml{
+    margin-left: 60px;
+}
+
+.mt{
+    margin-top: 70px;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#range-temp{
+    transform: rotate(-90deg);
+}
+
+#range-temp {
+    cursor: pointer;
+    --track-fill:0%;
+  }
+  
+  #range-temp,
+  #range-temp::-webkit-slider-runnable-track,
+  #range-temp::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  /** 
+   * Use o pseudo-seletor "::-webkit-slider-runnable-track" para customizar o "trilho" do campo.
+   */
+  #range-temp::-webkit-slider-runnable-track {
+    
+    width: 229px;
+    height: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right,
+    rgb(182, 198, 37,0.75) var(--track-fill),
+     transparent 0%);
+    border: 0.4px solid rgba(0, 0, 0, 0.582);
+  }
+  
+  /** 
+   * Use o pseudo-seletor "::-webkit-slider-thumb" para customizar o "seletor" do campo.
+   */
+  #range-temp::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    background-color: var(--background-color);
+    border-radius: 60px;
+    border: .4px solid rgba(0, 0, 0, 0.521);
+    margin-top: -8px;
+  }
+
+  #range-vent{
+    transform: rotate(-90deg);
+}
+
+#range-vent {
+    cursor: pointer;
+    --track-fill-vent:0%;
+  }
+  
+  #range-vent,
+  #range-vent::-webkit-slider-runnable-track,
+  #range-vent::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  /** 
+   * Use o pseudo-seletor "::-webkit-slider-runnable-track" para customizar o "trilho" do campo.
+   */
+  #range-vent::-webkit-slider-runnable-track {
+    
+    width: 229px;
+    height: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right,
+    rgb(182, 198, 37,0.75) var(--track-fill-vent),
+     transparent 0%);
+    border: 0.4px solid rgba(0, 0, 0, 0.582);
+  }
+  
+  /** 
+   * Use o pseudo-seletor "::-webkit-slider-thumb" para customizar o "seletor" do campo.
+   */
+  #range-vent::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+    background-color: var(--background-color);
+    border-radius: 60px;
+    border: .4px solid rgba(0, 0, 0, 0.521);
+    margin-top: -8px;
+  }
+
+#fan-03{
+    animation: fan 1s cubic-bezier(0.14, 0.12, 0.73, 0.76) infinite;
+}
+
+#fan-06{
+    animation: fan .7s cubic-bezier(0.14, 0.12, 0.73, 0.76) infinite;
+}
+
+#fan-09{
+    animation: fan .6s cubic-bezier(0.14, 0.12, 0.73, 0.76) infinite;
+}
+
+#fan-12{
+    animation: fan .4s cubic-bezier(0.14, 0.12, 0.73, 0.76) infinite;
+}
+
+  @keyframes fan {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
