@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#B6C625">
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +23,17 @@
 </head>
 
 <body>
+
+    <script src="./sw.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js');
+  });
+}
+      </script>
+
+<button id="setup_button" onclick="installApp()">Instalar</button>
 
     <main class="content">
         <div class="boxLogin">

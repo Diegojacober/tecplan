@@ -12,6 +12,10 @@
     
 }
 
+#setup_button {
+    display: none;
+}
+
 h5{
     color: var(--color-dark);
 }

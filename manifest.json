@@ -1,0 +1,30 @@
+{
+    "name": "Tecplan",
+    "description": "Controle sua estufa automática na palma de sua mão",
+    "short_name": "Tecplan - estufa automática",
+    "orientation": "portrait",
+    "lang": "pt-BR",
+    "theme_color": "#fff",
+    "scope": "/",
+    "background_color": "#B6C625",
+    "display": "fullscreen",
+    "start_url": "/index.html",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "logo-svg.svg",
+            "sizes": "80x80",
+            "type": "image/svg"
+        },
+        {
+            "src": "logo-tecplan.png",
+            "sizes": "184x185",
+            "type": "image/png"
+        },
+        {
+            "src": "ico.ico",
+            "type": "image/ico",
+            "sizes": "32x32"
+          }
+    ]
+}
